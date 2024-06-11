@@ -21,7 +21,7 @@ export default async function RootLayout({
 
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-sky-200`}>
         <NextAuthProvider session={session}>{children}</NextAuthProvider>
         <Toaster />
       </body>
