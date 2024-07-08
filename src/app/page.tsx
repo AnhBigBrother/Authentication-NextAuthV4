@@ -1,8 +1,9 @@
 import { SignOutBtn } from '@/components/sign-out-btn';
+import { authOption } from '@/lib/auth-option';
 import { getServerSession } from 'next-auth';
 
 export default async function Home() {
-  const session = await getServerSession();
+  const session = await getServerSession(authOption);
   return (
     <main className='flex min-h-screen flex-col items-center justify-start gap-y-10 pt-24'>
       <h1 className='text-sky-500 text-3xl font-medium'>Hello world!</h1>
